@@ -1,0 +1,608 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		A710D8BB2262F2CD00C9AEA5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A710D8BA2262F2CD00C9AEA5 /* AppDelegate.swift */; };
+		A710D8BD2262F2CD00C9AEA5 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A710D8BC2262F2CD00C9AEA5 /* ViewController.swift */; };
+		A710D8C02262F2CD00C9AEA5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A710D8BE2262F2CD00C9AEA5 /* Main.storyboard */; };
+		A710D8C32262F2CD00C9AEA5 /* PowerupiOS.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = A710D8C12262F2CD00C9AEA5 /* PowerupiOS.xcdatamodeld */; };
+		A710D8C52262F2CF00C9AEA5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A710D8C42262F2CF00C9AEA5 /* Assets.xcassets */; };
+		A710D8C82262F2CF00C9AEA5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A710D8C62262F2CF00C9AEA5 /* LaunchScreen.storyboard */; };
+		A710D8D32262F2CF00C9AEA5 /* PowerupiOSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A710D8D22262F2CF00C9AEA5 /* PowerupiOSTests.swift */; };
+		A710D8DE2262F2CF00C9AEA5 /* PowerupiOSUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A710D8DD2262F2CF00C9AEA5 /* PowerupiOSUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		A710D8CF2262F2CF00C9AEA5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A710D8AF2262F2CD00C9AEA5 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A710D8B62262F2CD00C9AEA5;
+			remoteInfo = PowerupiOS;
+		};
+		A710D8DA2262F2CF00C9AEA5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A710D8AF2262F2CD00C9AEA5 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A710D8B62262F2CD00C9AEA5;
+			remoteInfo = PowerupiOS;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		A710D8B72262F2CD00C9AEA5 /* PowerupiOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PowerupiOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		A710D8BA2262F2CD00C9AEA5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		A710D8BC2262F2CD00C9AEA5 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		A710D8BF2262F2CD00C9AEA5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		A710D8C22262F2CD00C9AEA5 /* PowerupiOS.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = PowerupiOS.xcdatamodel; sourceTree = "<group>"; };
+		A710D8C42262F2CF00C9AEA5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		A710D8C72262F2CF00C9AEA5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		A710D8C92262F2CF00C9AEA5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A710D8CE2262F2CF00C9AEA5 /* PowerupiOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PowerupiOSTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		A710D8D22262F2CF00C9AEA5 /* PowerupiOSTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PowerupiOSTests.swift; sourceTree = "<group>"; };
+		A710D8D42262F2CF00C9AEA5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A710D8D92262F2CF00C9AEA5 /* PowerupiOSUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PowerupiOSUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		A710D8DD2262F2CF00C9AEA5 /* PowerupiOSUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PowerupiOSUITests.swift; sourceTree = "<group>"; };
+		A710D8DF2262F2CF00C9AEA5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		A710D8B42262F2CD00C9AEA5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A710D8CB2262F2CF00C9AEA5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A710D8D62262F2CF00C9AEA5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		A710D8AE2262F2CD00C9AEA5 = {
+			isa = PBXGroup;
+			children = (
+				A710D8B92262F2CD00C9AEA5 /* PowerupiOS */,
+				A710D8D12262F2CF00C9AEA5 /* PowerupiOSTests */,
+				A710D8DC2262F2CF00C9AEA5 /* PowerupiOSUITests */,
+				A710D8B82262F2CD00C9AEA5 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		A710D8B82262F2CD00C9AEA5 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				A710D8B72262F2CD00C9AEA5 /* PowerupiOS.app */,
+				A710D8CE2262F2CF00C9AEA5 /* PowerupiOSTests.xctest */,
+				A710D8D92262F2CF00C9AEA5 /* PowerupiOSUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		A710D8B92262F2CD00C9AEA5 /* PowerupiOS */ = {
+			isa = PBXGroup;
+			children = (
+				A710D8BA2262F2CD00C9AEA5 /* AppDelegate.swift */,
+				A710D8BC2262F2CD00C9AEA5 /* ViewController.swift */,
+				A710D8BE2262F2CD00C9AEA5 /* Main.storyboard */,
+				A710D8C42262F2CF00C9AEA5 /* Assets.xcassets */,
+				A710D8C62262F2CF00C9AEA5 /* LaunchScreen.storyboard */,
+				A710D8C92262F2CF00C9AEA5 /* Info.plist */,
+				A710D8C12262F2CD00C9AEA5 /* PowerupiOS.xcdatamodeld */,
+			);
+			path = PowerupiOS;
+			sourceTree = "<group>";
+		};
+		A710D8D12262F2CF00C9AEA5 /* PowerupiOSTests */ = {
+			isa = PBXGroup;
+			children = (
+				A710D8D22262F2CF00C9AEA5 /* PowerupiOSTests.swift */,
+				A710D8D42262F2CF00C9AEA5 /* Info.plist */,
+			);
+			path = PowerupiOSTests;
+			sourceTree = "<group>";
+		};
+		A710D8DC2262F2CF00C9AEA5 /* PowerupiOSUITests */ = {
+			isa = PBXGroup;
+			children = (
+				A710D8DD2262F2CF00C9AEA5 /* PowerupiOSUITests.swift */,
+				A710D8DF2262F2CF00C9AEA5 /* Info.plist */,
+			);
+			path = PowerupiOSUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		A710D8B62262F2CD00C9AEA5 /* PowerupiOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A710D8E22262F2CF00C9AEA5 /* Build configuration list for PBXNativeTarget "PowerupiOS" */;
+			buildPhases = (
+				A710D8B32262F2CD00C9AEA5 /* Sources */,
+				A710D8B42262F2CD00C9AEA5 /* Frameworks */,
+				A710D8B52262F2CD00C9AEA5 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = PowerupiOS;
+			productName = PowerupiOS;
+			productReference = A710D8B72262F2CD00C9AEA5 /* PowerupiOS.app */;
+			productType = "com.apple.product-type.application";
+		};
+		A710D8CD2262F2CF00C9AEA5 /* PowerupiOSTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A710D8E52262F2CF00C9AEA5 /* Build configuration list for PBXNativeTarget "PowerupiOSTests" */;
+			buildPhases = (
+				A710D8CA2262F2CF00C9AEA5 /* Sources */,
+				A710D8CB2262F2CF00C9AEA5 /* Frameworks */,
+				A710D8CC2262F2CF00C9AEA5 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A710D8D02262F2CF00C9AEA5 /* PBXTargetDependency */,
+			);
+			name = PowerupiOSTests;
+			productName = PowerupiOSTests;
+			productReference = A710D8CE2262F2CF00C9AEA5 /* PowerupiOSTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		A710D8D82262F2CF00C9AEA5 /* PowerupiOSUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A710D8E82262F2CF00C9AEA5 /* Build configuration list for PBXNativeTarget "PowerupiOSUITests" */;
+			buildPhases = (
+				A710D8D52262F2CF00C9AEA5 /* Sources */,
+				A710D8D62262F2CF00C9AEA5 /* Frameworks */,
+				A710D8D72262F2CF00C9AEA5 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A710D8DB2262F2CF00C9AEA5 /* PBXTargetDependency */,
+			);
+			name = PowerupiOSUITests;
+			productName = PowerupiOSUITests;
+			productReference = A710D8D92262F2CF00C9AEA5 /* PowerupiOSUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		A710D8AF2262F2CD00C9AEA5 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1020;
+				LastUpgradeCheck = 1020;
+				ORGANIZATIONNAME = "Danner Op., LLC";
+				TargetAttributes = {
+					A710D8B62262F2CD00C9AEA5 = {
+						CreatedOnToolsVersion = 10.2;
+					};
+					A710D8CD2262F2CF00C9AEA5 = {
+						CreatedOnToolsVersion = 10.2;
+						TestTargetID = A710D8B62262F2CD00C9AEA5;
+					};
+					A710D8D82262F2CF00C9AEA5 = {
+						CreatedOnToolsVersion = 10.2;
+						TestTargetID = A710D8B62262F2CD00C9AEA5;
+					};
+				};
+			};
+			buildConfigurationList = A710D8B22262F2CD00C9AEA5 /* Build configuration list for PBXProject "PowerupiOS" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = A710D8AE2262F2CD00C9AEA5;
+			productRefGroup = A710D8B82262F2CD00C9AEA5 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				A710D8B62262F2CD00C9AEA5 /* PowerupiOS */,
+				A710D8CD2262F2CF00C9AEA5 /* PowerupiOSTests */,
+				A710D8D82262F2CF00C9AEA5 /* PowerupiOSUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		A710D8B52262F2CD00C9AEA5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A710D8C82262F2CF00C9AEA5 /* LaunchScreen.storyboard in Resources */,
+				A710D8C52262F2CF00C9AEA5 /* Assets.xcassets in Resources */,
+				A710D8C02262F2CD00C9AEA5 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A710D8CC2262F2CF00C9AEA5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A710D8D72262F2CF00C9AEA5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		A710D8B32262F2CD00C9AEA5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A710D8C32262F2CD00C9AEA5 /* PowerupiOS.xcdatamodeld in Sources */,
+				A710D8BD2262F2CD00C9AEA5 /* ViewController.swift in Sources */,
+				A710D8BB2262F2CD00C9AEA5 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A710D8CA2262F2CF00C9AEA5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A710D8D32262F2CF00C9AEA5 /* PowerupiOSTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A710D8D52262F2CF00C9AEA5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A710D8DE2262F2CF00C9AEA5 /* PowerupiOSUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		A710D8D02262F2CF00C9AEA5 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A710D8B62262F2CD00C9AEA5 /* PowerupiOS */;
+			targetProxy = A710D8CF2262F2CF00C9AEA5 /* PBXContainerItemProxy */;
+		};
+		A710D8DB2262F2CF00C9AEA5 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A710D8B62262F2CD00C9AEA5 /* PowerupiOS */;
+			targetProxy = A710D8DA2262F2CF00C9AEA5 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		A710D8BE2262F2CD00C9AEA5 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A710D8BF2262F2CD00C9AEA5 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		A710D8C62262F2CF00C9AEA5 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A710D8C72262F2CF00C9AEA5 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		A710D8E02262F2CF00C9AEA5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		A710D8E12262F2CF00C9AEA5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		A710D8E32262F2CF00C9AEA5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 8567B7Q6H6;
+				INFOPLIST_FILE = PowerupiOS/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = DannerOp.PowerupiOS;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		A710D8E42262F2CF00C9AEA5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 8567B7Q6H6;
+				INFOPLIST_FILE = PowerupiOS/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = DannerOp.PowerupiOS;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		A710D8E62262F2CF00C9AEA5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 8567B7Q6H6;
+				INFOPLIST_FILE = PowerupiOSTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = DannerOp.PowerupiOSTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PowerupiOS.app/PowerupiOS";
+			};
+			name = Debug;
+		};
+		A710D8E72262F2CF00C9AEA5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 8567B7Q6H6;
+				INFOPLIST_FILE = PowerupiOSTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = DannerOp.PowerupiOSTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PowerupiOS.app/PowerupiOS";
+			};
+			name = Release;
+		};
+		A710D8E92262F2CF00C9AEA5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 8567B7Q6H6;
+				INFOPLIST_FILE = PowerupiOSUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = DannerOp.PowerupiOSUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = PowerupiOS;
+			};
+			name = Debug;
+		};
+		A710D8EA2262F2CF00C9AEA5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 8567B7Q6H6;
+				INFOPLIST_FILE = PowerupiOSUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = DannerOp.PowerupiOSUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = PowerupiOS;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		A710D8B22262F2CD00C9AEA5 /* Build configuration list for PBXProject "PowerupiOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A710D8E02262F2CF00C9AEA5 /* Debug */,
+				A710D8E12262F2CF00C9AEA5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A710D8E22262F2CF00C9AEA5 /* Build configuration list for PBXNativeTarget "PowerupiOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A710D8E32262F2CF00C9AEA5 /* Debug */,
+				A710D8E42262F2CF00C9AEA5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A710D8E52262F2CF00C9AEA5 /* Build configuration list for PBXNativeTarget "PowerupiOSTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A710D8E62262F2CF00C9AEA5 /* Debug */,
+				A710D8E72262F2CF00C9AEA5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A710D8E82262F2CF00C9AEA5 /* Build configuration list for PBXNativeTarget "PowerupiOSUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A710D8E92262F2CF00C9AEA5 /* Debug */,
+				A710D8EA2262F2CF00C9AEA5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		A710D8C12262F2CD00C9AEA5 /* PowerupiOS.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				A710D8C22262F2CD00C9AEA5 /* PowerupiOS.xcdatamodel */,
+			);
+			currentVersion = A710D8C22262F2CD00C9AEA5 /* PowerupiOS.xcdatamodel */;
+			path = PowerupiOS.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = A710D8AF2262F2CD00C9AEA5 /* Project object */;
+}
