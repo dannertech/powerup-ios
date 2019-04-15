@@ -15,6 +15,15 @@
 		A710D8C82262F2CF00C9AEA5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A710D8C62262F2CF00C9AEA5 /* LaunchScreen.storyboard */; };
 		A710D8D32262F2CF00C9AEA5 /* PowerupiOSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A710D8D22262F2CF00C9AEA5 /* PowerupiOSTests.swift */; };
 		A710D8DE2262F2CF00C9AEA5 /* PowerupiOSUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A710D8DD2262F2CF00C9AEA5 /* PowerupiOSUITests.swift */; };
+		A710D8EC2262F3F700C9AEA5 /* AutoAPI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A710D8EB2262F3F700C9AEA5 /* AutoAPI.framework */; };
+		A710D8ED2262F3F700C9AEA5 /* AutoAPI.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = A710D8EB2262F3F700C9AEA5 /* AutoAPI.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		A710D8F02262F3FC00C9AEA5 /* HMCryptoKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A710D8EF2262F3FB00C9AEA5 /* HMCryptoKit.framework */; };
+		A710D8F12262F3FC00C9AEA5 /* HMCryptoKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = A710D8EF2262F3FB00C9AEA5 /* HMCryptoKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		A710D8F32262F40000C9AEA5 /* HMKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A710D8F22262F40000C9AEA5 /* HMKit.framework */; };
+		A710D8F42262F40000C9AEA5 /* HMKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = A710D8F22262F40000C9AEA5 /* HMKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		A710D8F62262F40500C9AEA5 /* HMUtilities.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A710D8F52262F40500C9AEA5 /* HMUtilities.framework */; };
+		A710D8F72262F40500C9AEA5 /* HMUtilities.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = A710D8F52262F40500C9AEA5 /* HMUtilities.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		A710D8F92262F4D500C9AEA5 /* Car.swift in Sources */ = {isa = PBXBuildFile; fileRef = A710D8F82262F4D500C9AEA5 /* Car.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,6 +43,23 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		A710D8EE2262F3F700C9AEA5 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				A710D8ED2262F3F700C9AEA5 /* AutoAPI.framework in Embed Frameworks */,
+				A710D8F42262F40000C9AEA5 /* HMKit.framework in Embed Frameworks */,
+				A710D8F72262F40500C9AEA5 /* HMUtilities.framework in Embed Frameworks */,
+				A710D8F12262F3FC00C9AEA5 /* HMCryptoKit.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		A710D8B72262F2CD00C9AEA5 /* PowerupiOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PowerupiOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A710D8BA2262F2CD00C9AEA5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -49,6 +75,11 @@
 		A710D8D92262F2CF00C9AEA5 /* PowerupiOSUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PowerupiOSUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A710D8DD2262F2CF00C9AEA5 /* PowerupiOSUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PowerupiOSUITests.swift; sourceTree = "<group>"; };
 		A710D8DF2262F2CF00C9AEA5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A710D8EB2262F3F700C9AEA5 /* AutoAPI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AutoAPI.framework; sourceTree = "<group>"; };
+		A710D8EF2262F3FB00C9AEA5 /* HMCryptoKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = HMCryptoKit.framework; sourceTree = "<group>"; };
+		A710D8F22262F40000C9AEA5 /* HMKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = HMKit.framework; sourceTree = "<group>"; };
+		A710D8F52262F40500C9AEA5 /* HMUtilities.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = HMUtilities.framework; sourceTree = "<group>"; };
+		A710D8F82262F4D500C9AEA5 /* Car.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Car.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +87,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A710D8EC2262F3F700C9AEA5 /* AutoAPI.framework in Frameworks */,
+				A710D8F32262F40000C9AEA5 /* HMKit.framework in Frameworks */,
+				A710D8F62262F40500C9AEA5 /* HMUtilities.framework in Frameworks */,
+				A710D8F02262F3FC00C9AEA5 /* HMCryptoKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -79,6 +114,10 @@
 		A710D8AE2262F2CD00C9AEA5 = {
 			isa = PBXGroup;
 			children = (
+				A710D8F52262F40500C9AEA5 /* HMUtilities.framework */,
+				A710D8F22262F40000C9AEA5 /* HMKit.framework */,
+				A710D8EF2262F3FB00C9AEA5 /* HMCryptoKit.framework */,
+				A710D8EB2262F3F700C9AEA5 /* AutoAPI.framework */,
 				A710D8B92262F2CD00C9AEA5 /* PowerupiOS */,
 				A710D8D12262F2CF00C9AEA5 /* PowerupiOSTests */,
 				A710D8DC2262F2CF00C9AEA5 /* PowerupiOSUITests */,
@@ -106,6 +145,7 @@
 				A710D8C62262F2CF00C9AEA5 /* LaunchScreen.storyboard */,
 				A710D8C92262F2CF00C9AEA5 /* Info.plist */,
 				A710D8C12262F2CD00C9AEA5 /* PowerupiOS.xcdatamodeld */,
+				A710D8F82262F4D500C9AEA5 /* Car.swift */,
 			);
 			path = PowerupiOS;
 			sourceTree = "<group>";
@@ -138,6 +178,7 @@
 				A710D8B32262F2CD00C9AEA5 /* Sources */,
 				A710D8B42262F2CD00C9AEA5 /* Frameworks */,
 				A710D8B52262F2CD00C9AEA5 /* Resources */,
+				A710D8EE2262F3F700C9AEA5 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -261,6 +302,7 @@
 			files = (
 				A710D8C32262F2CD00C9AEA5 /* PowerupiOS.xcdatamodeld in Sources */,
 				A710D8BD2262F2CD00C9AEA5 /* ViewController.swift in Sources */,
+				A710D8F92262F4D500C9AEA5 /* Car.swift in Sources */,
 				A710D8BB2262F2CD00C9AEA5 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -438,6 +480,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 8567B7Q6H6;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = PowerupiOS/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -456,6 +502,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 8567B7Q6H6;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = PowerupiOS/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
