@@ -32,6 +32,13 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="lDo-dw-hcZ">
+                                <rect key="frame" x="102" y="242" width="194" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="yZu-s9-3zc">
                                 <rect key="frame" x="102" y="415" width="194" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -47,13 +54,14 @@
                                     <action selector="submit:" destination="CCE-aV-lfZ" eventType="touchUpInside" id="F0j-SY-T5v"/>
                                 </connections>
                             </button>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="lDo-dw-hcZ">
-                                <rect key="frame" x="102" y="242" width="194" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xH8-LK-vlk">
+                                <rect key="frame" x="163" y="622" width="89" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <nil key="textColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
+                                <state key="normal" title="or Login"/>
+                                <connections>
+                                    <segue destination="3zo-3s-d8S" kind="showDetail" id="ymI-Qh-8mc"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="z1j-dz-bt4"/>
@@ -63,6 +71,7 @@
                         <outlet property="emailText" destination="MIQ-oR-SOP" id="pfp-yw-Ty9"/>
                         <outlet property="passwordText" destination="DfP-O7-G6R" id="Dct-9G-Fyq"/>
                         <outlet property="usernameText" destination="lDo-dw-hcZ" id="GAq-1Y-cVK"/>
+                        <segue destination="3V4-mq-bns" kind="showDetail" identifier="fromSignupToMain" id="s7T-AV-TQ3"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="O6z-uF-m2r" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -99,6 +108,14 @@
                                     <action selector="submit:" destination="3zo-3s-d8S" eventType="touchUpInside" id="QzN-A3-h8L"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ppu-5R-cLv">
+                                <rect key="frame" x="171" y="433" width="73" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="or Sign Up"/>
+                                <connections>
+                                    <segue destination="CCE-aV-lfZ" kind="showDetail" id="Ev8-0v-BUX"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="GwA-J8-XXj"/>
@@ -106,11 +123,12 @@
                     <connections>
                         <outlet property="emailText" destination="7cR-xc-95e" id="djH-DX-j4v"/>
                         <outlet property="passwordText" destination="0TA-CL-1OH" id="XvO-MY-VAZ"/>
+                        <segue destination="3V4-mq-bns" kind="showDetail" id="oVx-LA-3Xx"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fjZ-Xk-exQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="155.07246376811597" y="-536.38392857142856"/>
+            <point key="canvasLocation" x="155" y="-457"/>
         </scene>
         <!--Main View Controller-->
         <scene sceneID="HxE-6D-YC8">
@@ -161,4 +179,7 @@
             <point key="canvasLocation" x="971" y="-171"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="oVx-LA-3Xx"/>
+    </inferredMetricsTieBreakers>
 </document>
