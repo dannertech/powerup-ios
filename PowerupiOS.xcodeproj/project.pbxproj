@@ -28,6 +28,8 @@
 		A710D8F92262F4D500C9AEA5 /* Car.swift in Sources */ = {isa = PBXBuildFile; fileRef = A710D8F82262F4D500C9AEA5 /* Car.swift */; };
 		A710D8FB226451E500C9AEA5 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = A710D8FA226451E500C9AEA5 /* GoogleService-Info.plist */; };
 		A710D8FD226455FA00C9AEA5 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A710D8FC226455FA00C9AEA5 /* LoginViewController.swift */; };
+		A710D8FF2264572F00C9AEA5 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A710D8FE2264572F00C9AEA5 /* MainViewController.swift */; };
+		A710D9012264591D00C9AEA5 /* SignupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A710D9002264591D00C9AEA5 /* SignupViewController.swift */; };
 		C388CEB86EBC5E156B00630D /* Pods_PowerupiOSTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2030AA6DE476DCB10E3A58BE /* Pods_PowerupiOSTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -92,6 +94,8 @@
 		A710D8F82262F4D500C9AEA5 /* Car.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Car.swift; sourceTree = "<group>"; };
 		A710D8FA226451E500C9AEA5 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		A710D8FC226455FA00C9AEA5 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		A710D8FE2264572F00C9AEA5 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		A710D9002264591D00C9AEA5 /* SignupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupViewController.swift; sourceTree = "<group>"; };
 		B68EB540A32D79848EB85FD5 /* Pods-PowerupiOSUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PowerupiOSUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PowerupiOSUITests/Pods-PowerupiOSUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		C1C52F60F7A4DD7FBD54B0F4 /* Pods-PowerupiOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PowerupiOS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PowerupiOS/Pods-PowerupiOS.debug.xcconfig"; sourceTree = "<group>"; };
 		F116A3D35C0B9BAF4A7D6647 /* Pods-PowerupiOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PowerupiOS.release.xcconfig"; path = "Pods/Target Support Files/Pods-PowerupiOS/Pods-PowerupiOS.release.xcconfig"; sourceTree = "<group>"; };
@@ -146,6 +150,7 @@
 		A710D8AE2262F2CD00C9AEA5 = {
 			isa = PBXGroup;
 			children = (
+				A710D9002264591D00C9AEA5 /* SignupViewController.swift */,
 				A710D8F52262F40500C9AEA5 /* HMUtilities.framework */,
 				A710D8F22262F40000C9AEA5 /* HMKit.framework */,
 				A710D8EF2262F3FB00C9AEA5 /* HMCryptoKit.framework */,
@@ -173,6 +178,7 @@
 			isa = PBXGroup;
 			children = (
 				A710D8BA2262F2CD00C9AEA5 /* AppDelegate.swift */,
+				A710D8FE2264572F00C9AEA5 /* MainViewController.swift */,
 				A710D8BC2262F2CD00C9AEA5 /* ViewController.swift */,
 				A710D8BE2262F2CD00C9AEA5 /* Main.storyboard */,
 				A710D8FC226455FA00C9AEA5 /* LoginViewController.swift */,
@@ -433,8 +439,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				A710D8C32262F2CD00C9AEA5 /* PowerupiOS.xcdatamodeld in Sources */,
+				A710D9012264591D00C9AEA5 /* SignupViewController.swift in Sources */,
 				A710D8BD2262F2CD00C9AEA5 /* ViewController.swift in Sources */,
 				A710D8F92262F4D500C9AEA5 /* Car.swift in Sources */,
+				A710D8FF2264572F00C9AEA5 /* MainViewController.swift in Sources */,
 				A710D8FD226455FA00C9AEA5 /* LoginViewController.swift in Sources */,
 				A710D8BB2262F2CD00C9AEA5 /* AppDelegate.swift in Sources */,
 			);
