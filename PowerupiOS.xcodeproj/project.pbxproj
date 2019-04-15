@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0646F6B40F1551151D84D5B6 /* Pods_PowerupiOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7ABBC3617EC478DDADDA52B4 /* Pods_PowerupiOS.framework */; };
+		902E03CFB79E08605F865A2C /* Pods_PowerupiOSUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A0D1D5FDA16510044A608E4C /* Pods_PowerupiOSUITests.framework */; };
 		A710D8BB2262F2CD00C9AEA5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A710D8BA2262F2CD00C9AEA5 /* AppDelegate.swift */; };
 		A710D8BD2262F2CD00C9AEA5 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A710D8BC2262F2CD00C9AEA5 /* ViewController.swift */; };
 		A710D8C02262F2CD00C9AEA5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A710D8BE2262F2CD00C9AEA5 /* Main.storyboard */; };
@@ -24,6 +26,9 @@
 		A710D8F62262F40500C9AEA5 /* HMUtilities.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A710D8F52262F40500C9AEA5 /* HMUtilities.framework */; };
 		A710D8F72262F40500C9AEA5 /* HMUtilities.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = A710D8F52262F40500C9AEA5 /* HMUtilities.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		A710D8F92262F4D500C9AEA5 /* Car.swift in Sources */ = {isa = PBXBuildFile; fileRef = A710D8F82262F4D500C9AEA5 /* Car.swift */; };
+		A710D8FB226451E500C9AEA5 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = A710D8FA226451E500C9AEA5 /* GoogleService-Info.plist */; };
+		A710D8FD226455FA00C9AEA5 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A710D8FC226455FA00C9AEA5 /* LoginViewController.swift */; };
+		C388CEB86EBC5E156B00630D /* Pods_PowerupiOSTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2030AA6DE476DCB10E3A58BE /* Pods_PowerupiOSTests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,6 +66,11 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		2030AA6DE476DCB10E3A58BE /* Pods_PowerupiOSTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PowerupiOSTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3BEF53915AA31A38244CF6D7 /* Pods-PowerupiOSTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PowerupiOSTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-PowerupiOSTests/Pods-PowerupiOSTests.release.xcconfig"; sourceTree = "<group>"; };
+		7ABBC3617EC478DDADDA52B4 /* Pods_PowerupiOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PowerupiOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7AF1F58A311A04BED61DD859 /* Pods-PowerupiOSTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PowerupiOSTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PowerupiOSTests/Pods-PowerupiOSTests.debug.xcconfig"; sourceTree = "<group>"; };
+		A0D1D5FDA16510044A608E4C /* Pods_PowerupiOSUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PowerupiOSUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A710D8B72262F2CD00C9AEA5 /* PowerupiOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PowerupiOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A710D8BA2262F2CD00C9AEA5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A710D8BC2262F2CD00C9AEA5 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -80,6 +90,12 @@
 		A710D8F22262F40000C9AEA5 /* HMKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = HMKit.framework; sourceTree = "<group>"; };
 		A710D8F52262F40500C9AEA5 /* HMUtilities.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = HMUtilities.framework; sourceTree = "<group>"; };
 		A710D8F82262F4D500C9AEA5 /* Car.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Car.swift; sourceTree = "<group>"; };
+		A710D8FA226451E500C9AEA5 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		A710D8FC226455FA00C9AEA5 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		B68EB540A32D79848EB85FD5 /* Pods-PowerupiOSUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PowerupiOSUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PowerupiOSUITests/Pods-PowerupiOSUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		C1C52F60F7A4DD7FBD54B0F4 /* Pods-PowerupiOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PowerupiOS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PowerupiOS/Pods-PowerupiOS.debug.xcconfig"; sourceTree = "<group>"; };
+		F116A3D35C0B9BAF4A7D6647 /* Pods-PowerupiOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PowerupiOS.release.xcconfig"; path = "Pods/Target Support Files/Pods-PowerupiOS/Pods-PowerupiOS.release.xcconfig"; sourceTree = "<group>"; };
+		FF41C1D1128B326D4A54D936 /* Pods-PowerupiOSUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PowerupiOSUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-PowerupiOSUITests/Pods-PowerupiOSUITests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -91,6 +107,7 @@
 				A710D8F32262F40000C9AEA5 /* HMKit.framework in Frameworks */,
 				A710D8F62262F40500C9AEA5 /* HMUtilities.framework in Frameworks */,
 				A710D8F02262F3FC00C9AEA5 /* HMCryptoKit.framework in Frameworks */,
+				0646F6B40F1551151D84D5B6 /* Pods_PowerupiOS.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -98,6 +115,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C388CEB86EBC5E156B00630D /* Pods_PowerupiOSTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -105,12 +123,26 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				902E03CFB79E08605F865A2C /* Pods_PowerupiOSUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		593DFCB8A25AFF8CD0D9FA66 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				C1C52F60F7A4DD7FBD54B0F4 /* Pods-PowerupiOS.debug.xcconfig */,
+				F116A3D35C0B9BAF4A7D6647 /* Pods-PowerupiOS.release.xcconfig */,
+				7AF1F58A311A04BED61DD859 /* Pods-PowerupiOSTests.debug.xcconfig */,
+				3BEF53915AA31A38244CF6D7 /* Pods-PowerupiOSTests.release.xcconfig */,
+				B68EB540A32D79848EB85FD5 /* Pods-PowerupiOSUITests.debug.xcconfig */,
+				FF41C1D1128B326D4A54D936 /* Pods-PowerupiOSUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		A710D8AE2262F2CD00C9AEA5 = {
 			isa = PBXGroup;
 			children = (
@@ -122,6 +154,8 @@
 				A710D8D12262F2CF00C9AEA5 /* PowerupiOSTests */,
 				A710D8DC2262F2CF00C9AEA5 /* PowerupiOSUITests */,
 				A710D8B82262F2CD00C9AEA5 /* Products */,
+				593DFCB8A25AFF8CD0D9FA66 /* Pods */,
+				ECBBAD9E23FB9404E070B562 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -141,11 +175,13 @@
 				A710D8BA2262F2CD00C9AEA5 /* AppDelegate.swift */,
 				A710D8BC2262F2CD00C9AEA5 /* ViewController.swift */,
 				A710D8BE2262F2CD00C9AEA5 /* Main.storyboard */,
+				A710D8FC226455FA00C9AEA5 /* LoginViewController.swift */,
 				A710D8C42262F2CF00C9AEA5 /* Assets.xcassets */,
 				A710D8C62262F2CF00C9AEA5 /* LaunchScreen.storyboard */,
 				A710D8C92262F2CF00C9AEA5 /* Info.plist */,
 				A710D8C12262F2CD00C9AEA5 /* PowerupiOS.xcdatamodeld */,
 				A710D8F82262F4D500C9AEA5 /* Car.swift */,
+				A710D8FA226451E500C9AEA5 /* GoogleService-Info.plist */,
 			);
 			path = PowerupiOS;
 			sourceTree = "<group>";
@@ -168,6 +204,16 @@
 			path = PowerupiOSUITests;
 			sourceTree = "<group>";
 		};
+		ECBBAD9E23FB9404E070B562 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				7ABBC3617EC478DDADDA52B4 /* Pods_PowerupiOS.framework */,
+				2030AA6DE476DCB10E3A58BE /* Pods_PowerupiOSTests.framework */,
+				A0D1D5FDA16510044A608E4C /* Pods_PowerupiOSUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -175,10 +221,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = A710D8E22262F2CF00C9AEA5 /* Build configuration list for PBXNativeTarget "PowerupiOS" */;
 			buildPhases = (
+				AD84CE4A58BA19EC738CF83A /* [CP] Check Pods Manifest.lock */,
 				A710D8B32262F2CD00C9AEA5 /* Sources */,
 				A710D8B42262F2CD00C9AEA5 /* Frameworks */,
 				A710D8B52262F2CD00C9AEA5 /* Resources */,
 				A710D8EE2262F3F700C9AEA5 /* Embed Frameworks */,
+				3D10DBE565103B72002D226C /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -193,6 +241,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = A710D8E52262F2CF00C9AEA5 /* Build configuration list for PBXNativeTarget "PowerupiOSTests" */;
 			buildPhases = (
+				D3B1434B2721083FD5223E0F /* [CP] Check Pods Manifest.lock */,
 				A710D8CA2262F2CF00C9AEA5 /* Sources */,
 				A710D8CB2262F2CF00C9AEA5 /* Frameworks */,
 				A710D8CC2262F2CF00C9AEA5 /* Resources */,
@@ -211,6 +260,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = A710D8E82262F2CF00C9AEA5 /* Build configuration list for PBXNativeTarget "PowerupiOSUITests" */;
 			buildPhases = (
+				B448B80696C584E1CD050BB5 /* [CP] Check Pods Manifest.lock */,
 				A710D8D52262F2CF00C9AEA5 /* Sources */,
 				A710D8D62262F2CF00C9AEA5 /* Frameworks */,
 				A710D8D72262F2CF00C9AEA5 /* Resources */,
@@ -276,6 +326,7 @@
 				A710D8C82262F2CF00C9AEA5 /* LaunchScreen.storyboard in Resources */,
 				A710D8C52262F2CF00C9AEA5 /* Assets.xcassets in Resources */,
 				A710D8C02262F2CD00C9AEA5 /* Main.storyboard in Resources */,
+				A710D8FB226451E500C9AEA5 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -295,6 +346,87 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		3D10DBE565103B72002D226C /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-PowerupiOS/Pods-PowerupiOS-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
+				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PowerupiOS/Pods-PowerupiOS-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		AD84CE4A58BA19EC738CF83A /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-PowerupiOS-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B448B80696C584E1CD050BB5 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-PowerupiOSUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D3B1434B2721083FD5223E0F /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-PowerupiOSTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		A710D8B32262F2CD00C9AEA5 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -303,6 +435,7 @@
 				A710D8C32262F2CD00C9AEA5 /* PowerupiOS.xcdatamodeld in Sources */,
 				A710D8BD2262F2CD00C9AEA5 /* ViewController.swift in Sources */,
 				A710D8F92262F4D500C9AEA5 /* Car.swift in Sources */,
+				A710D8FD226455FA00C9AEA5 /* LoginViewController.swift in Sources */,
 				A710D8BB2262F2CD00C9AEA5 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -476,6 +609,7 @@
 		};
 		A710D8E32262F2CF00C9AEA5 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C1C52F60F7A4DD7FBD54B0F4 /* Pods-PowerupiOS.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -498,6 +632,7 @@
 		};
 		A710D8E42262F2CF00C9AEA5 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F116A3D35C0B9BAF4A7D6647 /* Pods-PowerupiOS.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -520,6 +655,7 @@
 		};
 		A710D8E62262F2CF00C9AEA5 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7AF1F58A311A04BED61DD859 /* Pods-PowerupiOSTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -541,6 +677,7 @@
 		};
 		A710D8E72262F2CF00C9AEA5 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3BEF53915AA31A38244CF6D7 /* Pods-PowerupiOSTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -562,6 +699,7 @@
 		};
 		A710D8E92262F2CF00C9AEA5 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B68EB540A32D79848EB85FD5 /* Pods-PowerupiOSUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -582,6 +720,7 @@
 		};
 		A710D8EA2262F2CF00C9AEA5 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = FF41C1D1128B326D4A54D936 /* Pods-PowerupiOSUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;

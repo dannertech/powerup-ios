@@ -1,0 +1,6 @@
+framework module Pods_PowerupiOSUITests {
+  umbrella header "Pods-PowerupiOSUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}
