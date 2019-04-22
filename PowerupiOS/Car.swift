@@ -7,22 +7,22 @@
 //
 
 import Foundation
+import AutoAPI
 
 class Car {
-    var charge: Float?
-    var defrosting: Bool?
-    var location: Float?
-    var charging: Bool?
+    var charge: AAPercentage!
+    var defrosting: AAActiveState!
+    var location: AACoordinates!
+    var charging: AAChargingState!
     var nickname: String?
     
     
-    init(nickname: String, currentCharge: Float, defrostingState: Bool, currentLocation: Float, chargingState: Bool){
+    init(nickname: String, currentCharge: AAPercentage, defrostingState: AAActiveState, currentLocation: AACoordinates, chargingState: AAChargingState){
         self.nickname = nickname
         self.charge = currentCharge
         self.defrosting = defrostingState
         self.location = currentLocation
         self.charging = chargingState
-        
     }
     
     

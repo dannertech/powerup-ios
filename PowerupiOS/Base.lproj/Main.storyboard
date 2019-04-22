@@ -123,7 +123,7 @@
                     <connections>
                         <outlet property="emailText" destination="7cR-xc-95e" id="djH-DX-j4v"/>
                         <outlet property="passwordText" destination="0TA-CL-1OH" id="XvO-MY-VAZ"/>
-                        <segue destination="3V4-mq-bns" kind="showDetail" id="oVx-LA-3Xx"/>
+                        <segue destination="3V4-mq-bns" kind="showDetail" identifier="fromLoginToMain" id="oVx-LA-3Xx"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fjZ-Xk-exQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -134,52 +134,63 @@
         <scene sceneID="HxE-6D-YC8">
             <objects>
                 <viewController id="3V4-mq-bns" customClass="MainViewController" customModule="PowerupiOS" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="rVA-As-PkJ">
+                    <view key="view" contentMode="scaleToFill" id="AFT-vn-hZb">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gzU-qA-qJM">
-                                <rect key="frame" x="121" y="268" width="191" height="30"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Nickname" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BC0-Lm-fVa">
+                                <rect key="frame" x="127" y="301" width="150" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Car Charging" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TBA-8x-HUl">
+                                <rect key="frame" x="127" y="330" width="101" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Defrosting" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qdp-Qb-5NX">
+                                <rect key="frame" x="127" y="359" width="101" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5z2-DM-veO">
+                                <rect key="frame" x="127" y="199" width="122" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Add User and Car"/>
                                 <connections>
-                                    <action selector="addUser:" destination="3V4-mq-bns" eventType="touchUpInside" id="nIe-kt-3fT"/>
+                                    <action selector="addUser:" destination="3V4-mq-bns" eventType="touchUpInside" id="aBf-6U-ULD"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vJL-VL-pBo">
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2DL-hS-Fzu">
                                 <rect key="frame" x="344" y="44" width="55" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Log Out"/>
                                 <connections>
-                                    <action selector="logOut:" destination="3V4-mq-bns" eventType="touchUpInside" id="YvL-nM-qCo"/>
+                                    <action selector="logOut:" destination="3V4-mq-bns" eventType="touchUpInside" id="rk1-nh-NYe"/>
                                 </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <viewLayoutGuide key="safeArea" id="rqd-kL-hcN"/>
+                        <viewLayoutGuide key="safeArea" id="noU-UN-qzf"/>
                     </view>
+                    <connections>
+                        <outlet property="carChargingLabel" destination="TBA-8x-HUl" id="b09-CQ-I43"/>
+                        <outlet property="defrostingLabel" destination="qdp-Qb-5NX" id="6Vh-bD-OPM"/>
+                        <outlet property="nicknameLabel" destination="BC0-Lm-fVa" id="w6b-7u-ogF"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9kw-ws-2RH" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="918.84057971014499" y="-815.625"/>
         </scene>
-        <!--View Controller-->
-        <scene sceneID="tne-QT-ifu">
-            <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="PowerupiOS" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="971" y="-171"/>
-        </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="oVx-LA-3Xx"/>
+        <segue reference="s7T-AV-TQ3"/>
     </inferredMetricsTieBreakers>
 </document>

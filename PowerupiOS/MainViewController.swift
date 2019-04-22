@@ -15,9 +15,19 @@ import HMKit
 
 
 class MainViewController: UIViewController {
+    @IBOutlet var nicknameLabel: UILabel!
+    @IBOutlet var carChargingLabel: UILabel!
+    
+    @IBOutlet var defrostingLabel: UILabel!
+    var currentLocation : AACoordinates!
+    var nickname : String!
+    var charging : AAChargingState!
+    var currentCharge : AAPercentage!
+    var defrostingState : AAActiveState!
+    
     var ref: DatabaseReference!
     
-    var newCar = Car(nickname: "PP", currentCharge: 85.6, defrostingState: false, currentLocation: 1000.0, chargingState: false)
+    let userID = Auth.auth().currentUser?.displayName
     
     
     
@@ -28,18 +38,23 @@ class MainViewController: UIViewController {
     }
     
     @IBAction func addUser(_ sender: Any) {
-        let userID = Auth.auth().currentUser?.displayName
-        self.ref.child("users").child(userID!).child(self.newCar.nickname!).child("charge").setValue(self.newCar.charge)
+     //add user here or is this even necessary
+       var newCar = Car(nickname: "PP", currentCharge: self.currentCharge, defrostingState: self.defrostingState, currentLocation: self.currentLocation, chargingState: self.charging)
+        print(newCar.defrosting as! NSString)
     }
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         initialiseLocalDevice()
-        
         ref = Database.database().reference()
+        getDefrosting()
+        getLocation()
+        chargeEngine()
         
+       // var newCar = Car(nickname: "PP", currentCharge: self.currentCharge, defrostingState: self.defrostingState, currentLocation: self.currentLocation, chargingState: self.charging)
+
+    //   self.ref.child(self.userID!).child(self.nickname).setValue(newCar)
         // Do any additional setup after loading the view.
     }
     
@@ -77,9 +92,14 @@ class MainViewController: UIViewController {
                                 guard let data = data else {
                                     return print("missing response data")
                                 }
-                                guard let chargingInformation = AutoAPI.parseBinary(data) as? AACharging else {
-                                    return print("failed to parse Auto API")
+                                guard let chargingInformation = AutoAPI.parseBinary(data) as? AACharging
+                                    else {
+                                        return print("failed to parse Auto API")
                                 }
+                                self.currentCharge = chargingInformation.batteryLevel?.value!
+                               self.charging = chargingInformation.state?.value!
+                                print(self.currentCharge!)
+                                print(self.charging!)
                             } else {
                                 print("unable to get charging data")
                             }
@@ -95,7 +115,104 @@ class MainViewController: UIViewController {
         } catch {
             print("Download cert error: \(error)")
         }
-        
-        
     }
+    
+    func getLocation(){
+        do {
+            let accessToken: String = "4bed3ceb-8113-4250-a34b-fd6d3dee371f"
+            
+            
+            guard accessToken != "4bed3ceb-8113-4250-a34b-fd6d3dee371f " else {
+                fatalError("Please get the ACCESS TOKEN with the instructions above, thanks")
+            }
+            try HMTelematics.downloadAccessCertificate(accessToken: accessToken){
+                result in
+                if case HMTelematicsRequestResult.success(let serial) = result {
+                    print("certificate downloaded, sending command through telematics")
+                    do{
+                        try HMTelematics.sendCommand(AAVehicleLocation.getLocation.bytes, serial: serial) {
+                            response in
+                            if case HMTelematicsRequestResult.success(let data) = response {
+                                guard let data = data else {
+                                    return print("missing response data")
+                                }
+                                guard let locationInformation = AutoAPI.parseBinary(data) as? AAVehicleLocation
+                                    else {
+                                        return print("failed to parse Auto API")
+                                }
+                                self.currentLocation = locationInformation.coordinates?.value!
+                                print(self.currentLocation.latitude)
+                                
+                            } else {
+                                print("unable to get charging data")
+                            }
+                        }
+                    } catch {
+                        print("failed to send command")
+                    }
+                } else {
+                    print("failed to download certificate")
+                }
+            }
+            
+        } catch {
+            print("Download cert error: \(error)")
+        }
+    }
+    
+    
+    func getDefrosting(){
+        do {
+            let accessToken: String = "4bed3ceb-8113-4250-a34b-fd6d3dee371f"
+            
+            
+            guard accessToken != "4bed3ceb-8113-4250-a34b-fd6d3dee371f " else {
+                fatalError("Please get the ACCESS TOKEN with the instructions above, thanks")
+            }
+            try HMTelematics.downloadAccessCertificate(accessToken: accessToken){
+                result in
+                if case HMTelematicsRequestResult.success(let serial) = result {
+                    print("certificate downloaded, sending command through telematics")
+                    do{
+                        try HMTelematics.sendCommand(AAClimate.getClimateState.bytes, serial: serial) {
+                            response in
+                            if case HMTelematicsRequestResult.success(let data) = response {
+                                guard let data = data else {
+                                    return print("missing response data")
+                                }
+                                guard let climateInformation = AutoAPI.parseBinary(data) as? AAClimate
+                                    else {
+                                        return print("failed to parse Auto API")
+                                }
+                               
+                                self.defrostingState = climateInformation.defrostingState?.value!
+                                print(self.defrostingState!)
+                            } else {
+                                print("unable to get charging data")
+                            }
+                        }
+                    } catch {
+                        print("failed to send command")
+                    }
+                } else {
+                    print("failed to download certificate")
+                }
+            }
+            
+        } catch {
+            print("Download cert error: \(error)")
+        }
+    }
+    
+  /*  func getStats() -> Car {
+        getDefrosting()
+        getLocation()
+        chargeEngine()
+       var newCar = Car(nickname: "PP", currentCharge: self.currentCharge, defrostingState: self.defrostingState, currentLocation: self.currentLocation, chargingState: self.charging)
+        return(newCar)
+    }
+    
+    */
+   
 }
+
