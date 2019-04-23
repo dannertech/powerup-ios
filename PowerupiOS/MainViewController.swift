@@ -25,22 +25,36 @@ class MainViewController: UIViewController {
     var currentCharge : AAPercentage!
     var defrostingState : AAActiveState!
     
+    
+  
+    
     var ref: DatabaseReference!
     
     let userID = Auth.auth().currentUser?.displayName
     
-    
-    
+ 
+  
     
     @IBAction func logOut(_ sender: Any) {
         try! Auth.auth().signOut()
         self.dismiss(animated: false, completion: nil)
     }
     
-    @IBAction func addUser(_ sender: Any) {
+    @IBAction func updateCarStats(_ sender: Any) {
+        print(self.currentLocation.latitude)
+var newCar = Car(nickname: "PP", currentCharge: self.currentCharge, defrostingState: self.defrostingState, currentLocation: self.currentLocation, chargingState: self.charging)
      //add user here or is this even necessary
-       var newCar = Car(nickname: "PP", currentCharge: self.currentCharge, defrostingState: self.defrostingState, currentLocation: self.currentLocation, chargingState: self.charging)
-        print(newCar.defrosting as! NSString)
+  
+       
+   newCar.checkAndConvertAAValues(defrostingAA: newCar.defrosting, chargingAA: newCar.charging, currentLocationAA: newCar.location, currentChargeAA: newCar.charge)
+        print(newCar.chargeValue)
+        
+       self.ref.child(self.userID! as String).child(newCar.nickname!).child("charging").setValue(newCar.chargingValue)
+        self.ref.child(self.userID! as String).child(newCar.nickname!).child("charge").setValue(newCar.chargeValue)
+        self.ref.child(self.userID! as String).child(newCar.nickname!).child("vehicle location latitude").setValue(newCar.latitudeValue)
+        self.ref.child(self.userID! as String).child(newCar.nickname!).child("vehicle location logitude").setValue(newCar.longitudeValue)
+        self.ref.child(self.userID! as String).child(newCar.nickname!).child("defrosting").setValue(newCar.defrostingValue)
+        
     }
     
     
@@ -52,7 +66,7 @@ class MainViewController: UIViewController {
         getLocation()
         chargeEngine()
         
-       // var newCar = Car(nickname: "PP", currentCharge: self.currentCharge, defrostingState: self.defrostingState, currentLocation: self.currentLocation, chargingState: self.charging)
+ 
 
     //   self.ref.child(self.userID!).child(self.nickname).setValue(newCar)
         // Do any additional setup after loading the view.
@@ -203,16 +217,7 @@ class MainViewController: UIViewController {
             print("Download cert error: \(error)")
         }
     }
-    
-  /*  func getStats() -> Car {
-        getDefrosting()
-        getLocation()
-        chargeEngine()
-       var newCar = Car(nickname: "PP", currentCharge: self.currentCharge, defrostingState: self.defrostingState, currentLocation: self.currentLocation, chargingState: self.charging)
-        return(newCar)
-    }
-    
-    */
+
    
 }
 
