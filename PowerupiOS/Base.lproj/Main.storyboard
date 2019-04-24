@@ -175,6 +175,22 @@
                                     <action selector="updateCarStats:" destination="3V4-mq-bns" eventType="touchUpInside" id="mqv-ra-in1"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wef-YM-PVm">
+                                <rect key="frame" x="89" y="491" width="241" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Defrost"/>
+                                <connections>
+                                    <action selector="defrost:" destination="3V4-mq-bns" eventType="touchUpInside" id="ReB-hh-9oh"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1Ok-M3-djf">
+                                <rect key="frame" x="127" y="529" width="165" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Charge"/>
+                                <connections>
+                                    <action selector="chargeCar:" destination="3V4-mq-bns" eventType="touchUpInside" id="OYf-IJ-c5S"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="noU-UN-qzf"/>

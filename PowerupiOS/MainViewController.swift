@@ -25,7 +25,7 @@ class MainViewController: UIViewController {
     var currentCharge : AAPercentage!
     var defrostingState : AAActiveState!
     
-    
+    var newCar : Car!
   
     
     var ref: DatabaseReference!
@@ -42,18 +42,18 @@ class MainViewController: UIViewController {
     
     @IBAction func updateCarStats(_ sender: Any) {
         print(self.currentLocation.latitude)
-var newCar = Car(nickname: "PP", currentCharge: self.currentCharge, defrostingState: self.defrostingState, currentLocation: self.currentLocation, chargingState: self.charging)
+self.newCar = Car(nickname: "PP", currentCharge: self.currentCharge, defrostingState: self.defrostingState, currentLocation: self.currentLocation, chargingState: self.charging)
      //add user here or is this even necessary
   
        
-   newCar.checkAndConvertAAValues(defrostingAA: newCar.defrosting, chargingAA: newCar.charging, currentLocationAA: newCar.location, currentChargeAA: newCar.charge)
-        print(newCar.chargeValue)
+   newCar.checkAndConvertAAValues(defrostingAA: self.newCar.defrosting, chargingAA: self.newCar.charging, currentLocationAA: self.newCar.location, currentChargeAA: self.newCar.charge)
+        print(self.newCar.chargeValue)
         
-       self.ref.child(self.userID! as String).child(newCar.nickname!).child("charging").setValue(newCar.chargingValue)
-        self.ref.child(self.userID! as String).child(newCar.nickname!).child("charge").setValue(newCar.chargeValue)
-        self.ref.child(self.userID! as String).child(newCar.nickname!).child("vehicle location latitude").setValue(newCar.latitudeValue)
-        self.ref.child(self.userID! as String).child(newCar.nickname!).child("vehicle location logitude").setValue(newCar.longitudeValue)
-        self.ref.child(self.userID! as String).child(newCar.nickname!).child("defrosting").setValue(newCar.defrostingValue)
+       self.ref.child("users").child(self.userID! as String).child(newCar.nickname!).child("charging").setValue(newCar.chargingValue)
+        self.ref.child("users").child(self.userID! as String).child(newCar.nickname!).child("charge").setValue(newCar.chargeValue)
+        self.ref.child("users").child(self.userID! as String).child(newCar.nickname!).child("vehicle location latitude").setValue(newCar.latitudeValue)
+        self.ref.child("users").child(self.userID! as String).child(newCar.nickname!).child("vehicle location logitude").setValue(newCar.longitudeValue)
+        self.ref.child("users").child(self.userID! as String).child(newCar.nickname!).child("defrosting").setValue(newCar.defrostingValue)
         
     }
     
@@ -70,6 +70,10 @@ var newCar = Car(nickname: "PP", currentCharge: self.currentCharge, defrostingSt
 
     //   self.ref.child(self.userID!).child(self.nickname).setValue(newCar)
         // Do any additional setup after loading the view.
+    }
+    @IBAction func defrost(_ sender: Any) {
+        
+        self.defrostCar()
     }
     
     func initialiseLocalDevice(){
@@ -218,6 +222,107 @@ var newCar = Car(nickname: "PP", currentCharge: self.currentCharge, defrostingSt
         }
     }
 
-   
+    func defrostCar(){
+        do {
+            let accessToken: String = "4bed3ceb-8113-4250-a34b-fd6d3dee371f"
+            
+            
+            guard accessToken != "4bed3ceb-8113-4250-a34b-fd6d3dee371f " else {
+                fatalError("Please get the ACCESS TOKEN with the instructions above, thanks")
+            }
+            try HMTelematics.downloadAccessCertificate(accessToken: accessToken){
+                result in
+                if case HMTelematicsRequestResult.success(let serial) = result {
+                    print("certificate downloaded, sending command through telematics")
+                    do{
+                        try HMTelematics.sendCommand(AAClimate.startStopDefrosting(AAActiveState.active).bytes, serial: serial) {
+                            response in
+                            if case HMTelematicsRequestResult.success(let data) = response {
+                                guard let data = data else {
+                                    return print("missing response data")
+                                }
+                                guard let climateInformation = AutoAPI.parseBinary(data) as? AAClimate
+                                    else {
+                                        return print("failed to parse Auto API")
+                                }
+                                
+                                self.defrostingState = climateInformation.defrostingState?.value!
+                                
+                                if(self.newCar.defrostingValue == "false"){
+                                    self.newCar.defrostingValue = "true"
+                                } else {
+                                    self.newCar.defrostingValue = "false"
+                                }
+                                self.ref.child("users").child(self.userID! as String).child("defrosting").setValue(self.newCar.defrostingValue)
+                                print(self.defrostingState!)
+                            } else {
+                                print("unable to get charging data")
+                            }
+                        }
+                    } catch {
+                        print("failed to send command")
+                    }
+                } else {
+                    print("failed to download certificate")
+                }
+            }
+            
+        } catch {
+            print("Download cert error: \(error)")
+        }
+    }
+
+    
+    func chargeCar(){
+        do {
+            let accessToken: String = "4bed3ceb-8113-4250-a34b-fd6d3dee371f"
+            
+            
+            guard accessToken != "4bed3ceb-8113-4250-a34b-fd6d3dee371f " else {
+                fatalError("Please get the ACCESS TOKEN with the instructions above, thanks")
+            }
+            try HMTelematics.downloadAccessCertificate(accessToken: accessToken){
+                result in
+                if case HMTelematicsRequestResult.success(let serial) = result {
+                    print("certificate downloaded, sending command through telematics")
+                    do{
+                        try HMTelematics.sendCommand(AACharging.startStopCharging(AAActiveState.active).bytes, serial: serial) {
+                            response in
+                            if case HMTelematicsRequestResult.success(let data) = response {
+                                guard let data = data else {
+                                    return print("missing response data")
+                                }
+                                guard let climateInformation = AutoAPI.parseBinary(data) as? AAClimate
+                                    else {
+                                        return print("failed to parse Auto API")
+                                }
+                                
+                                self.defrostingState = climateInformation.defrostingState?.value!
+                                
+                                if(self.newCar.defrostingValue == "false"){
+                                    self.newCar.defrostingValue = "true"
+                                } else {
+                                    self.newCar.defrostingValue = "false"
+                                }
+                                self.ref.child("users").child(self.userID! as String).child("defrosting").setValue(self.newCar.defrostingValue)
+                                print(self.defrostingState!)
+                            } else {
+                                print("unable to get charging data")
+                            }
+                        }
+                    } catch {
+                        print("failed to send command")
+                    }
+                } else {
+                    print("failed to download certificate")
+                }
+            }
+            
+        } catch {
+            print("Download cert error: \(error)")
+        }
+    }
+    
+    
 }
 
