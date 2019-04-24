@@ -57,6 +57,11 @@ self.newCar = Car(nickname: "PP", currentCharge: self.currentCharge, defrostingS
         
     }
     
+    @IBAction func chargeCar(_ sender: Any) {
+        self.chargeCar()
+    }
+    
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -292,20 +297,12 @@ self.newCar = Car(nickname: "PP", currentCharge: self.currentCharge, defrostingS
                                 guard let data = data else {
                                     return print("missing response data")
                                 }
-                                guard let climateInformation = AutoAPI.parseBinary(data) as? AAClimate
+                                guard let chargingInformation = AutoAPI.parseBinary(data) as? AACharging
                                     else {
                                         return print("failed to parse Auto API")
                                 }
                                 
-                                self.defrostingState = climateInformation.defrostingState?.value!
-                                
-                                if(self.newCar.defrostingValue == "false"){
-                                    self.newCar.defrostingValue = "true"
-                                } else {
-                                    self.newCar.defrostingValue = "false"
-                                }
-                                self.ref.child("users").child(self.userID! as String).child("defrosting").setValue(self.newCar.defrostingValue)
-                                print(self.defrostingState!)
+                                print(chargingInformation)
                             } else {
                                 print("unable to get charging data")
                             }
