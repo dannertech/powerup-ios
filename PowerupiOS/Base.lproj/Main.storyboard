@@ -139,21 +139,21 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Nickname" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BC0-Lm-fVa">
-                                <rect key="frame" x="127" y="301" width="150" height="21"/>
+                                <rect key="frame" x="150" y="573" width="150" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Car Charging" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TBA-8x-HUl">
-                                <rect key="frame" x="127" y="330" width="101" height="21"/>
+                                <rect key="frame" x="140" y="602" width="101" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Defrosting" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qdp-Qb-5NX">
-                                <rect key="frame" x="127" y="359" width="101" height="21"/>
+                                <rect key="frame" x="148" y="631" width="101" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
@@ -168,25 +168,29 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lEf-Bj-bZA">
-                                <rect key="frame" x="127" y="245" width="165" height="30"/>
+                                <rect key="frame" x="112" y="736" width="165" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Get Car Data"/>
                                 <connections>
                                     <action selector="updateCarStats:" destination="3V4-mq-bns" eventType="touchUpInside" id="mqv-ra-in1"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wef-YM-PVm">
-                                <rect key="frame" x="89" y="491" width="241" height="30"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Porsche" translatesAutoresizingMaskIntoConstraints="NO" id="OOb-Nj-Rk9">
+                                <rect key="frame" x="48" y="361" width="319" height="128"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Defrost"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wef-YM-PVm">
+                                <rect key="frame" x="203" y="298" width="113" height="55"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="defrost-off"/>
                                 <connections>
                                     <action selector="defrost:" destination="3V4-mq-bns" eventType="touchUpInside" id="ReB-hh-9oh"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4aO-YN-ehw">
-                                <rect key="frame" x="127" y="529" width="165" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4aO-YN-ehw">
+                                <rect key="frame" x="129" y="299" width="53" height="54"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Charge"/>
+                                <state key="normal" image="charging-off"/>
                                 <connections>
                                     <action selector="chargeCar:" destination="3V4-mq-bns" eventType="touchUpInside" id="C7A-zL-jrb"/>
                                 </connections>
@@ -197,6 +201,9 @@
                     </view>
                     <connections>
                         <outlet property="carChargingLabel" destination="TBA-8x-HUl" id="b09-CQ-I43"/>
+                        <outlet property="carImage" destination="OOb-Nj-Rk9" id="pcl-hz-YxV"/>
+                        <outlet property="chargeButtonIcon" destination="4aO-YN-ehw" id="c19-5L-wXZ"/>
+                        <outlet property="defrostButtonIcon" destination="Wef-YM-PVm" id="yWs-4x-H7m"/>
                         <outlet property="defrostingLabel" destination="qdp-Qb-5NX" id="6Vh-bD-OPM"/>
                         <outlet property="nicknameLabel" destination="BC0-Lm-fVa" id="w6b-7u-ogF"/>
                     </connections>
@@ -206,6 +213,11 @@
             <point key="canvasLocation" x="918.84057971014499" y="-815.625"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Porsche" width="397" height="144"/>
+        <image name="charging-off" width="53" height="54"/>
+        <image name="defrost-off" width="53" height="53"/>
+    </resources>
     <inferredMetricsTieBreakers>
         <segue reference="s7T-AV-TQ3"/>
     </inferredMetricsTieBreakers>

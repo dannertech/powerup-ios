@@ -95,7 +95,7 @@
 		A710D8FA226451E500C9AEA5 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		A710D8FC226455FA00C9AEA5 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		A710D8FE2264572F00C9AEA5 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
-		A710D9002264591D00C9AEA5 /* SignupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupViewController.swift; sourceTree = "<group>"; };
+		A710D9002264591D00C9AEA5 /* SignupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SignupViewController.swift; path = ../SignupViewController.swift; sourceTree = "<group>"; };
 		B68EB540A32D79848EB85FD5 /* Pods-PowerupiOSUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PowerupiOSUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PowerupiOSUITests/Pods-PowerupiOSUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		C1C52F60F7A4DD7FBD54B0F4 /* Pods-PowerupiOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PowerupiOS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PowerupiOS/Pods-PowerupiOS.debug.xcconfig"; sourceTree = "<group>"; };
 		F116A3D35C0B9BAF4A7D6647 /* Pods-PowerupiOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PowerupiOS.release.xcconfig"; path = "Pods/Target Support Files/Pods-PowerupiOS/Pods-PowerupiOS.release.xcconfig"; sourceTree = "<group>"; };
@@ -150,7 +150,6 @@
 		A710D8AE2262F2CD00C9AEA5 = {
 			isa = PBXGroup;
 			children = (
-				A710D9002264591D00C9AEA5 /* SignupViewController.swift */,
 				A710D8F52262F40500C9AEA5 /* HMUtilities.framework */,
 				A710D8F22262F40000C9AEA5 /* HMKit.framework */,
 				A710D8EF2262F3FB00C9AEA5 /* HMCryptoKit.framework */,
@@ -177,6 +176,7 @@
 		A710D8B92262F2CD00C9AEA5 /* PowerupiOS */ = {
 			isa = PBXGroup;
 			children = (
+				A710D9002264591D00C9AEA5 /* SignupViewController.swift */,
 				A710D8BA2262F2CD00C9AEA5 /* AppDelegate.swift */,
 				A710D8FE2264572F00C9AEA5 /* MainViewController.swift */,
 				A710D8BC2262F2CD00C9AEA5 /* ViewController.swift */,

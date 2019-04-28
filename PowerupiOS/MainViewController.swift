@@ -27,6 +27,9 @@ class MainViewController: UIViewController {
     
     var newCar : Car!
   
+    @IBOutlet var chargeButtonIcon: UIButton!
+    @IBOutlet var defrostButtonIcon: UIButton!
+    @IBOutlet var carImage: UIImageView!
     
     var ref: DatabaseReference!
     
@@ -41,13 +44,13 @@ class MainViewController: UIViewController {
     }
     
     @IBAction func updateCarStats(_ sender: Any) {
-        print(self.currentLocation.latitude)
+        
 self.newCar = Car(nickname: "PP", currentCharge: self.currentCharge, defrostingState: self.defrostingState, currentLocation: self.currentLocation, chargingState: self.charging)
      //add user here or is this even necessary
   
        
    newCar.checkAndConvertAAValues(defrostingAA: self.newCar.defrosting, chargingAA: self.newCar.charging, currentLocationAA: self.newCar.location, currentChargeAA: self.newCar.charge)
-        print(self.newCar.chargeValue)
+     
         
        self.ref.child("users").child(self.userID! as String).child(newCar.nickname!).child("charging").setValue(newCar.chargingValue)
         self.ref.child("users").child(self.userID! as String).child(newCar.nickname!).child("charge").setValue(newCar.chargeValue)
@@ -58,18 +61,49 @@ self.newCar = Car(nickname: "PP", currentCharge: self.currentCharge, defrostingS
     }
     
     @IBAction func chargeCar(_ sender: Any) {
+        //definitely have to get car data and set this value or else it will be nil and cause a crash
+        if(self.newCar.chargingValue == "false"){
         self.chargeCar()
+            //change value
+            self.newCar.chargingValue = "true"
+            self.chargeButtonIcon.setImage(UIImage(named: "charging-on"), for: .normal)
+            //save it to database
+            self.ref.child("users").child(self.userID! as String).child("charging").setValue(self.newCar.chargingValue)
+        } else {
+               self.newCar.chargingValue = "false"
+            self.chargeButtonIcon.setImage(UIImage(named: "charging-off"), for: .normal)
+            self.chargeEngineOff()
+              self.ref.child("users").child(self.userID! as String).child("charging").setValue(self.newCar.chargingValue)
+            
+            
+         
+            
+        }
     }
     
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        initialiseLocalDevice()
+   
         ref = Database.database().reference()
-        getDefrosting()
-        getLocation()
-        chargeEngine()
+        
+        //attempt to read data belonging to the user
+        ref.child("users").child(self.userID! as String).observeSingleEvent(of: .value, with: { (snapshot) in
+            let value = snapshot.value as? NSDictionary
+            if let carData = value?["defrosting"] {
+                print("car data retrieved")
+            } else {
+                print("unsuccessful")
+                self.chargeButtonIcon.isHidden = true
+                self.defrostButtonIcon.isHidden = true
+                self.carImage.isHidden = true
+            }
+            
+        })
+   //     getDefrosting()
+    //    getLocation()
+     //   chargeEngine()
         
  
 
@@ -77,8 +111,21 @@ self.newCar = Car(nickname: "PP", currentCharge: self.currentCharge, defrostingS
         // Do any additional setup after loading the view.
     }
     @IBAction func defrost(_ sender: Any) {
-        
-        self.defrostCar()
+        if(self.newCar.defrostingValue == "false"){
+               self.defrostCar()
+            //change button image
+            self.defrostButtonIcon.setImage(UIImage(named: "defrost-on"), for: .normal)
+            //change value before saving it to database
+            self.newCar.defrostingValue = "true"
+            //save to database
+            self.ref.child("users").child(self.userID! as String).child("defrosting").setValue(self.newCar.defrostingValue)
+        } else {
+            self.defrostButtonIcon.setImage(UIImage(named: "defrost-off"), for: .normal)
+            self.newCar.defrostingValue = "false"
+            self.ref.child("users").child(self.userID! as String).child("defrosting").setValue(self.newCar.defrostingValue)
+            
+        }
+    
     }
     
     func initialiseLocalDevice(){
@@ -139,6 +186,49 @@ self.newCar = Car(nickname: "PP", currentCharge: self.currentCharge, defrostingS
             print("Download cert error: \(error)")
         }
     }
+    
+    func chargeEngineOff(){
+        do {
+            let accessToken: String = "4bed3ceb-8113-4250-a34b-fd6d3dee371f"
+            
+            
+            guard accessToken != "4bed3ceb-8113-4250-a34b-fd6d3dee371f " else {
+                fatalError("Please get the ACCESS TOKEN with the instructions above, thanks")
+            }
+            try HMTelematics.downloadAccessCertificate(accessToken: accessToken){
+                result in
+                if case HMTelematicsRequestResult.success(let serial) = result {
+                    print("certificate downloaded, sending command through telematics")
+                    do{
+                        try HMTelematics.sendCommand(AACharging.startStopCharging(AAActiveState.inactive).bytes, serial: serial) {
+                            response in
+                            if case HMTelematicsRequestResult.success(let data) = response {
+                                guard let data = data else {
+                                    return print("missing response data")
+                                }
+                                guard let chargingInformation = AutoAPI.parseBinary(data) as? AACharging
+                                    else {
+                                        return print("failed to parse Auto API")
+                                }
+                                
+                                print(chargingInformation)
+                            } else {
+                                print("unable to get charging data")
+                            }
+                        }
+                    } catch {
+                        print("failed to send command")
+                    }
+                } else {
+                    print("failed to download certificate")
+                }
+            }
+            
+        } catch {
+            print("Download cert error: \(error)")
+        }
+    }
+    
     
     func getLocation(){
         do {
@@ -274,6 +364,53 @@ self.newCar = Car(nickname: "PP", currentCharge: self.currentCharge, defrostingS
             
         } catch {
             print("Download cert error: \(error)")
+        }
+    }
+    
+    func defrostCarOff(){
+        if(self.newCar.defrostingValue == "true"){
+            do {
+                let accessToken: String = "4bed3ceb-8113-4250-a34b-fd6d3dee371f"
+                
+                
+                guard accessToken != "4bed3ceb-8113-4250-a34b-fd6d3dee371f " else {
+                    fatalError("Please get the ACCESS TOKEN with the instructions above, thanks")
+                }
+                try HMTelematics.downloadAccessCertificate(accessToken: accessToken){
+                    result in
+                    if case HMTelematicsRequestResult.success(let serial) = result {
+                        print("certificate downloaded, sending command through telematics")
+                        do{
+                            try HMTelematics.sendCommand(AAClimate.startStopDefrosting(AAActiveState.inactive).bytes, serial: serial) {
+                                response in
+                                if case HMTelematicsRequestResult.success(let data) = response {
+                                    guard let data = data else {
+                                        return print("missing response data")
+                                    }
+                                    guard let climateInformation = AutoAPI.parseBinary(data) as? AAClimate
+                                        else {
+                                            return print("failed to parse Auto API")
+                                    }
+                                    
+                                    self.defrostingState = climateInformation.defrostingState?.value!
+                                    self.newCar.defrostingValue = "false"
+                                    self.ref.child("users").child(self.userID! as String).child("defrosting").setValue(self.newCar.defrostingValue)
+                                    print(self.defrostingState!)
+                                } else {
+                                    print("unable to get defrost AAClimate data")
+                                }
+                            }
+                        } catch {
+                            print("failed to send command")
+                        }
+                    } else {
+                        print("failed to download certificate")
+                    }
+                }
+                
+            } catch {
+                print("Download cert error: \(error)")
+            }
         }
     }
 
