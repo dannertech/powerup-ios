@@ -30,17 +30,46 @@ class MainViewController: UIViewController {
     @IBOutlet var chargeButtonIcon: UIButton!
     @IBOutlet var defrostButtonIcon: UIButton!
     @IBOutlet var carImage: UIImageView!
+    @IBOutlet var createCarButton: UIButton!
     
     var ref: DatabaseReference!
     
     let userID = Auth.auth().currentUser?.displayName
     
  
-  
+    @IBOutlet var carNicknameField: UITextField!
+    
     
     @IBAction func logOut(_ sender: Any) {
         try! Auth.auth().signOut()
         self.dismiss(animated: false, completion: nil)
+    }
+    
+    
+    @IBAction func createCarButton(_ sender: Any) {
+        if(self.carNicknameField.text != nil){
+            let carNickname = self.carNicknameField.text
+            self.nickname = carNickname
+        }
+        
+        self.getLocation()
+        self.getDefrosting()
+      //  self.chargeCar()
+        self.chargeEngine()
+        
+        
+   
+    }
+    @IBAction func getNewVehicleDataButton(_ sender: Any) {
+        self.newCar = Car(nickname: self.nickname, currentCharge: self.currentCharge, defrostingState: self.defrostingState, currentLocation: self.currentLocation, chargingState: self.charging)
+        
+        newCar.checkAndConvertAAValues(defrostingAA: self.newCar.defrosting, chargingAA: self.newCar.charging, currentLocationAA: self.newCar.location, currentChargeAA: self.newCar.charge)
+        
+        self.ref.child("users").child(self.userID! as String).child(newCar.nickname!).child("defrosting").setValue(newCar.defrostingValue)
+        self.ref.child("users").child(self.userID! as String).child(newCar.nickname!).child("charging").setValue(newCar.chargingValue)
+        self.ref.child("users").child(self.userID! as String).child(newCar.nickname!).child("charge").setValue(newCar.chargeValue)
+        self.ref.child("users").child(self.userID! as String).child(newCar.nickname!).child("vehicle location latitude").setValue(newCar.latitudeValue)
+        self.ref.child("users").child(self.userID! as String).child(newCar.nickname!).child("vehicle location longitude").setValue(newCar.longitudeValue)
     }
     
     @IBAction func updateCarStats(_ sender: Any) {
@@ -49,7 +78,7 @@ self.newCar = Car(nickname: "PP", currentCharge: self.currentCharge, defrostingS
      //add user here or is this even necessary
   
        
-   newCar.checkAndConvertAAValues(defrostingAA: self.newCar.defrosting, chargingAA: self.newCar.charging, currentLocationAA: self.newCar.location, currentChargeAA: self.newCar.charge)
+  
      
         
        self.ref.child("users").child(self.userID! as String).child(newCar.nickname!).child("charging").setValue(newCar.chargingValue)
@@ -87,6 +116,7 @@ self.newCar = Car(nickname: "PP", currentCharge: self.currentCharge, defrostingS
         super.viewDidLoad()
    
         ref = Database.database().reference()
+        initialiseLocalDevice()
         
         //attempt to read data belonging to the user
         ref.child("users").child(self.userID! as String).observeSingleEvent(of: .value, with: { (snapshot) in
@@ -98,12 +128,15 @@ self.newCar = Car(nickname: "PP", currentCharge: self.currentCharge, defrostingS
                 self.chargeButtonIcon.isHidden = true
                 self.defrostButtonIcon.isHidden = true
                 self.carImage.isHidden = true
+                //show create car button and corresponding form
+                self.createCarButton.isHidden = false
+                self.carNicknameField.isHidden = false
             }
             
         })
-   //     getDefrosting()
-    //    getLocation()
-     //   chargeEngine()
+      // getDefrosting()
+     //   getLocation()
+      // chargeEngine()
         
  
 
