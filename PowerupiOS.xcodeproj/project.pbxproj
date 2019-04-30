@@ -31,6 +31,7 @@
 		A710D8FF2264572F00C9AEA5 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A710D8FE2264572F00C9AEA5 /* MainViewController.swift */; };
 		A710D9012264591D00C9AEA5 /* SignupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A710D9002264591D00C9AEA5 /* SignupViewController.swift */; };
 		A7D834E62277DB4D0070BE45 /* RoundButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7D834E52277DB4D0070BE45 /* RoundButton.swift */; };
+		A7D834E82277DFFD0070BE45 /* CardDesign.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7D834E72277DFFD0070BE45 /* CardDesign.swift */; };
 		C388CEB86EBC5E156B00630D /* Pods_PowerupiOSTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2030AA6DE476DCB10E3A58BE /* Pods_PowerupiOSTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -98,6 +99,7 @@
 		A710D8FE2264572F00C9AEA5 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		A710D9002264591D00C9AEA5 /* SignupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SignupViewController.swift; path = ../SignupViewController.swift; sourceTree = "<group>"; };
 		A7D834E52277DB4D0070BE45 /* RoundButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = RoundButton.swift; path = ../RoundButton.swift; sourceTree = "<group>"; };
+		A7D834E72277DFFD0070BE45 /* CardDesign.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardDesign.swift; sourceTree = "<group>"; };
 		B68EB540A32D79848EB85FD5 /* Pods-PowerupiOSUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PowerupiOSUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PowerupiOSUITests/Pods-PowerupiOSUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		C1C52F60F7A4DD7FBD54B0F4 /* Pods-PowerupiOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PowerupiOS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PowerupiOS/Pods-PowerupiOS.debug.xcconfig"; sourceTree = "<group>"; };
 		F116A3D35C0B9BAF4A7D6647 /* Pods-PowerupiOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PowerupiOS.release.xcconfig"; path = "Pods/Target Support Files/Pods-PowerupiOS/Pods-PowerupiOS.release.xcconfig"; sourceTree = "<group>"; };
@@ -184,6 +186,7 @@
 				A710D8FE2264572F00C9AEA5 /* MainViewController.swift */,
 				A710D8BC2262F2CD00C9AEA5 /* ViewController.swift */,
 				A710D8BE2262F2CD00C9AEA5 /* Main.storyboard */,
+				A7D834E72277DFFD0070BE45 /* CardDesign.swift */,
 				A710D8FC226455FA00C9AEA5 /* LoginViewController.swift */,
 				A710D8C42262F2CF00C9AEA5 /* Assets.xcassets */,
 				A710D8C62262F2CF00C9AEA5 /* LaunchScreen.storyboard */,
@@ -444,6 +447,7 @@
 				A7D834E62277DB4D0070BE45 /* RoundButton.swift in Sources */,
 				A710D8C32262F2CD00C9AEA5 /* PowerupiOS.xcdatamodeld in Sources */,
 				A710D9012264591D00C9AEA5 /* SignupViewController.swift in Sources */,
+				A7D834E82277DFFD0070BE45 /* CardDesign.swift in Sources */,
 				A710D8BD2262F2CD00C9AEA5 /* ViewController.swift in Sources */,
 				A710D8F92262F4D500C9AEA5 /* Car.swift in Sources */,
 				A710D8FF2264572F00C9AEA5 /* MainViewController.swift in Sources */,

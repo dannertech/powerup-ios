@@ -31,6 +31,8 @@ class MainViewController: UIViewController {
     @IBOutlet var defrostButtonIcon: UIButton!
     @IBOutlet var carImage: UIImageView!
     @IBOutlet var createCarButton: UIButton!
+    @IBOutlet var getVehicleDataButton: UIButton!
+    @IBOutlet var updateCarStatsButton: UIButton!
     
     var ref: DatabaseReference!
     
@@ -50,6 +52,7 @@ class MainViewController: UIViewController {
         if(self.carNicknameField.text != nil){
             let carNickname = self.carNicknameField.text
             self.nickname = carNickname
+            self.getVehicleDataButton.isHidden = false
         }
         
         self.getLocation()
@@ -65,12 +68,13 @@ class MainViewController: UIViewController {
         
         newCar.checkAndConvertAAValues(defrostingAA: self.newCar.defrosting, chargingAA: self.newCar.charging, currentLocationAA: self.newCar.location, currentChargeAA: self.newCar.charge)
         
-        self.ref.child("users").child(self.userID! as String).child(newCar.nickname!).child("defrosting").setValue(newCar.defrostingValue)
-        self.ref.child("users").child(self.userID! as String).child(newCar.nickname!).child("charging").setValue(newCar.chargingValue)
+        self.ref.child("users").child(self.userID! as String).child("defrosting").setValue(newCar.defrostingValue)
+      /*  self.ref.child("users").child(self.userID! as String).child(newCar.nickname!).child("charging").setValue(newCar.chargingValue)
         self.ref.child("users").child(self.userID! as String).child(newCar.nickname!).child("charge").setValue(newCar.chargeValue)
         self.ref.child("users").child(self.userID! as String).child(newCar.nickname!).child("vehicle location latitude").setValue(newCar.latitudeValue)
         self.ref.child("users").child(self.userID! as String).child(newCar.nickname!).child("vehicle location longitude").setValue(newCar.longitudeValue)
-    }
+ */
+ }
     
     @IBAction func updateCarStats(_ sender: Any) {
         
@@ -123,6 +127,11 @@ self.newCar = Car(nickname: "PP", currentCharge: self.currentCharge, defrostingS
             let value = snapshot.value as? NSDictionary
             if let carData = value?["defrosting"] {
                 print("car data retrieved")
+                //hide create car button and form
+                self.createCarButton.isHidden = true
+                self.carNicknameField.isHidden = true
+                self.getVehicleDataButton.isHidden = true
+                
             } else {
                 print("unsuccessful")
                 self.chargeButtonIcon.isHidden = true
@@ -131,6 +140,8 @@ self.newCar = Car(nickname: "PP", currentCharge: self.currentCharge, defrostingS
                 //show create car button and corresponding form
                 self.createCarButton.isHidden = false
                 self.carNicknameField.isHidden = false
+                self.getVehicleDataButton.isHidden = true
+                self.updateCarStatsButton.isHidden = true
             }
             
         })
