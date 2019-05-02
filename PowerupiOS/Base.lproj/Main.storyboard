@@ -218,27 +218,11 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2DL-hS-Fzu">
-                                <rect key="frame" x="344" y="44" width="55" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Log Out"/>
-                                <connections>
-                                    <action selector="logOut:" destination="3V4-mq-bns" eventType="touchUpInside" id="rk1-nh-NYe"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lEf-Bj-bZA">
-                                <rect key="frame" x="112" y="736" width="165" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Get Car Data"/>
-                                <connections>
-                                    <action selector="updateCarStats:" destination="3V4-mq-bns" eventType="touchUpInside" id="mqv-ra-in1"/>
-                                </connections>
-                            </button>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Porsche" translatesAutoresizingMaskIntoConstraints="NO" id="OOb-Nj-Rk9">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Porsche" translatesAutoresizingMaskIntoConstraints="NO" id="OOb-Nj-Rk9">
                                 <rect key="frame" x="48" y="361" width="319" height="128"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wef-YM-PVm">
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wef-YM-PVm">
                                 <rect key="frame" x="203" y="298" width="113" height="55"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="defrost-off"/>
@@ -246,7 +230,7 @@
                                     <action selector="defrost:" destination="3V4-mq-bns" eventType="touchUpInside" id="ReB-hh-9oh"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4aO-YN-ehw">
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4aO-YN-ehw">
                                 <rect key="frame" x="129" y="299" width="53" height="54"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="charging-off"/>
@@ -254,7 +238,7 @@
                                     <action selector="chargeCar:" destination="3V4-mq-bns" eventType="touchUpInside" id="C7A-zL-jrb"/>
                                 </connections>
                             </button>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="jpy-rT-ONx" customClass="CardDesign" customModule="PowerupiOS" customModuleProvider="target">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jpy-rT-ONx" customClass="CardDesign" customModule="PowerupiOS" customModuleProvider="target">
                                 <rect key="frame" x="87" y="215" width="240" height="131"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
@@ -288,7 +272,7 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </view>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZIF-L5-3uM">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZIF-L5-3uM">
                                 <rect key="frame" x="140" y="354" width="132" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Get Vehicle Data"/>
@@ -296,16 +280,23 @@
                                     <action selector="getNewVehicleDataButton:" destination="3V4-mq-bns" eventType="touchUpInside" id="Kxo-eT-mVA"/>
                                 </connections>
                             </button>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Wba-gT-SIf" customClass="CardDesign" customModule="PowerupiOS" customModuleProvider="target">
-                                <rect key="frame" x="13" y="431" width="160" height="111"/>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="r1N-0r-cUb" customClass="CardDesign" customModule="PowerupiOS" customModuleProvider="target">
+                                <rect key="frame" x="22" y="497" width="160" height="111"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Nickname" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BC0-Lm-fVa">
-                                        <rect key="frame" x="15" y="34" width="130" height="43"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Value" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qdp-Qb-5NX">
+                                        <rect key="frame" x="30" y="39" width="101" height="32"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <color key="highlightedColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Defrosting" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MDd-Vg-Mpz">
+                                        <rect key="frame" x="26" y="21" width="105" height="26"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="21"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -316,13 +307,20 @@
                                 </userDefinedRuntimeAttributes>
                             </view>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fWl-vk-Zhs" customClass="CardDesign" customModule="PowerupiOS" customModuleProvider="target">
-                                <rect key="frame" x="226" y="431" width="160" height="111"/>
+                                <rect key="frame" x="226" y="497" width="160" height="111"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Car Charging" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TBA-8x-HUl">
-                                        <rect key="frame" x="30" y="45" width="101" height="21"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Value" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TBA-8x-HUl">
+                                        <rect key="frame" x="59" y="51" width="42" height="25"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Car Charging" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EJ4-1u-TaW">
+                                        <rect key="frame" x="15" y="23" width="131" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="21"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
@@ -334,47 +332,63 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </view>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="r1N-0r-cUb" customClass="CardDesign" customModule="PowerupiOS" customModuleProvider="target">
-                                <rect key="frame" x="126" y="580" width="160" height="111"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="amiyah" translatesAutoresizingMaskIntoConstraints="NO" id="itL-zC-W5d">
+                                <rect key="frame" x="236" y="145" width="47" height="63"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Defrosting" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qdp-Qb-5NX">
-                                        <rect key="frame" x="30" y="28" width="101" height="58"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                </subviews>
-                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Home" translatesAutoresizingMaskIntoConstraints="NO" id="zq7-xH-2mc">
+                                <rect key="frame" x="-16" y="145" width="383" height="85"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2DL-hS-Fzu">
+                                <rect key="frame" x="344" y="44" width="55" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Log Out"/>
+                                <connections>
+                                    <action selector="logOut:" destination="3V4-mq-bns" eventType="touchUpInside" id="rk1-nh-NYe"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lEf-Bj-bZA" customClass="RoundButton" customModule="PowerupiOS" customModuleProvider="target">
+                                <rect key="frame" x="129" y="652" width="165" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="Get Car Data">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                                         <real key="value" value="15"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
-                            </view>
+                                <connections>
+                                    <action selector="updateCarStats:" destination="3V4-mq-bns" eventType="touchUpInside" id="mqv-ra-in1"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="noU-UN-qzf"/>
                         <variation key="default">
                             <mask key="subviews">
+                                <exclude reference="jpy-rT-ONx"/>
+                                <exclude reference="ZIF-L5-3uM"/>
                                 <exclude reference="2DL-hS-Fzu"/>
-                                <exclude reference="OOb-Nj-Rk9"/>
-                                <exclude reference="Wef-YM-PVm"/>
-                                <exclude reference="4aO-YN-ehw"/>
                             </mask>
                         </variation>
                     </view>
                     <connections>
+                        <outlet property="carChargingField" destination="TBA-8x-HUl" id="ZHy-tW-xJR"/>
                         <outlet property="carChargingLabel" destination="TBA-8x-HUl" id="b09-CQ-I43"/>
+                        <outlet property="carChargingView" destination="fWl-vk-Zhs" id="HPn-jD-Hld"/>
                         <outlet property="carImage" destination="OOb-Nj-Rk9" id="pcl-hz-YxV"/>
                         <outlet property="carNicknameField" destination="gAw-J0-gVX" id="azC-jq-nmV"/>
                         <outlet property="chargeButtonIcon" destination="4aO-YN-ehw" id="c19-5L-wXZ"/>
                         <outlet property="createCarButton" destination="mVg-Jq-8lu" id="Ffi-qc-RRw"/>
+                        <outlet property="createCarView" destination="jpy-rT-ONx" id="Z2V-M1-Ctd"/>
                         <outlet property="defrostButtonIcon" destination="Wef-YM-PVm" id="yWs-4x-H7m"/>
+                        <outlet property="defrostingField" destination="qdp-Qb-5NX" id="cUY-zh-O2v"/>
                         <outlet property="defrostingLabel" destination="qdp-Qb-5NX" id="6Vh-bD-OPM"/>
+                        <outlet property="defrostingView" destination="r1N-0r-cUb" id="pDh-jJ-sJx"/>
                         <outlet property="getVehicleDataButton" destination="ZIF-L5-3uM" id="YZ6-db-ihS"/>
-                        <outlet property="nicknameLabel" destination="BC0-Lm-fVa" id="w6b-7u-ogF"/>
                         <outlet property="updateCarStatsButton" destination="lEf-Bj-bZA" id="JSj-mM-E9w"/>
                     </connections>
                 </viewController>
@@ -384,7 +398,9 @@
         </scene>
     </scenes>
     <resources>
+        <image name="Home" width="210" height="50"/>
         <image name="Porsche" width="397" height="144"/>
+        <image name="amiyah" width="52" height="52"/>
         <image name="charging-off" width="53" height="54"/>
         <image name="defrost-off" width="53" height="53"/>
         <image name="porsche-blueprint-2" width="803" height="301"/>

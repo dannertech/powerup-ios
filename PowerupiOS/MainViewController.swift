@@ -38,8 +38,17 @@ class MainViewController: UIViewController {
     
     let userID = Auth.auth().currentUser?.displayName
     
- 
+    @IBOutlet var createCarView: CardDesign!
+    
+    @IBOutlet var nicknameView: CardDesign!
     @IBOutlet var carNicknameField: UITextField!
+    @IBOutlet var carChargingField: UILabel!
+    
+    @IBOutlet var defrostingField: UILabel!
+
+    
+    @IBOutlet var carChargingView: CardDesign!
+    @IBOutlet var defrostingView: CardDesign!
     
     
     @IBAction func logOut(_ sender: Any) {
@@ -77,12 +86,16 @@ class MainViewController: UIViewController {
  }
     
     @IBAction func updateCarStats(_ sender: Any) {
+
         
 self.newCar = Car(nickname: "PP", currentCharge: self.currentCharge, defrostingState: self.defrostingState, currentLocation: self.currentLocation, chargingState: self.charging)
      //add user here or is this even necessary
   
        
-  
+      self.newCar.checkAndConvertAAValues(defrostingAA: self.newCar.defrosting, chargingAA: self.newCar.charging, currentLocationAA: self.newCar.location, currentChargeAA: self.newCar.charge)
+        
+        self.carChargingField.text = self.newCar.chargingValue
+        self.defrostingField.text = self.newCar.defrostingValue
      
         
        self.ref.child("users").child(self.userID! as String).child(newCar.nickname!).child("charging").setValue(newCar.chargingValue)
@@ -122,15 +135,29 @@ self.newCar = Car(nickname: "PP", currentCharge: self.currentCharge, defrostingS
         ref = Database.database().reference()
         initialiseLocalDevice()
         
+        self.getDefrosting()
+        self.getLocation()
+        self.chargeEngine()
+        
         //attempt to read data belonging to the user
         ref.child("users").child(self.userID! as String).observeSingleEvent(of: .value, with: { (snapshot) in
             let value = snapshot.value as? NSDictionary
-            if let carData = value?["defrosting"] {
-                print("car data retrieved")
+            if let defrostingValue = value?["defrosting"] {
+          
+                
+                self.defrostingField.text = defrostingValue as? String
+                self.carChargingField.text = value?["charging"] as? String
+                    
                 //hide create car button and form
                 self.createCarButton.isHidden = true
-                self.carNicknameField.isHidden = true
+             
                 self.getVehicleDataButton.isHidden = true
+                self.createCarView.isHidden = true
+                self.carChargingView.isHidden = false
+                self.defrostingView.isHidden = false
+             
+                //show car and data
+                self.carImage.isHidden = false
                 
             } else {
                 print("unsuccessful")
@@ -139,16 +166,14 @@ self.newCar = Car(nickname: "PP", currentCharge: self.currentCharge, defrostingS
                 self.carImage.isHidden = true
                 //show create car button and corresponding form
                 self.createCarButton.isHidden = false
-                self.carNicknameField.isHidden = false
+             
                 self.getVehicleDataButton.isHidden = true
                 self.updateCarStatsButton.isHidden = true
+                self.createCarView.isHidden = false
             }
             
         })
-      // getDefrosting()
-     //   getLocation()
-      // chargeEngine()
-        
+     
  
 
     //   self.ref.child(self.userID!).child(self.nickname).setValue(newCar)
